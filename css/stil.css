@@ -1,0 +1,124 @@
+body { /*Template til siden tok jeg fra forelesning*/
+  background-color: rgb(255, 255, 255);
+  font-family: 'NATS', sans-serif;
+  margin: 0;
+}
+
+#total-grid { /*https://www.w3schools.com/css/css_grid.asp*/
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header-grid { /*Even og Webutviklingsboka*/
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  text-decoration: none;
+  font-size: 60px;
+  color: #48B8F6;
+  justify-content: center;
+}
+
+#menu { /*dette løste jeg ved hjelp av Webutviklingsboka og Even*/
+  font-size: 30px;
+  color: #DB5AF0;
+  text-decoration: none;
+  float: right;
+  margin-top: 1.5rem;
+  margin-left: 0.6rem;
+}
+
+#search {
+  font-size: 30px;
+  color: #B96262;
+  text-decoration: none;
+  float: right;
+  margin-right: 0.6rem;
+  margin-top: 2.5rem;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main section img {
+  width: 100%;
+  height: auto;
+}
+
+main section a { /*https://www.browserstack.com/guide/position-text-over-image-using-css*/
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /*https://www.shecodes.io/athena/22835-how-to-add-a-shadow-to-text-with-css*/
+  position: relative;
+  bottom: 20%;
+  left: 30%;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  background-color: #D9D9D9;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+footer nav p { /*https://www.shecodes.io/athena/36202-how-to-remove-space-between-lines-in-css*/
+  line-height: 1em;
+}
+
+footer nav #copyright {
+  color: #686868
+}
+
+#social-icons {
+  float: right;
+  font-size: 50px;
+  margin-top: 1.8rem;
+}
+  
+@media only screen and (min-width: 800px) {
+
+  #total-grid {
+    grid-template-areas: "header header header" 
+                          "main main main" 
+                          "footer footer footer";
+  }
+
+  #logo {
+    font-size: 80px;
+    float: left;
+    margin-left: 0.4rem;
+    margin-top: 4rem;
+
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+@media only screen and (max-width: 799px) {
+  
+  #desktop {
+    display: none;
+  }
+
+}
