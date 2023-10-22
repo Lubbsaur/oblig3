@@ -27,7 +27,7 @@ body { /*Template til siden tok jeg fra forelesning*/
   font-size: 30px;
   color: #DB5AF0;
   text-decoration: none;
-  float: right;
+  float: left;
   margin-top: 1.5rem;
   margin-left: 0.6rem;
 }
@@ -48,19 +48,25 @@ main {
   justify-content: space-between;
 }
 
-main section img {
+#hoved img {
   width: 100%;
   height: auto;
 }
 
-main section a { /*https://www.browserstack.com/guide/position-text-over-image-using-css*/
+#hoved h3 { /*https://www.browserstack.com/guide/position-text-over-image-using-css*/
   text-decoration: none;
   font-size: 30px;
   color: black;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /*https://www.shecodes.io/athena/22835-how-to-add-a-shadow-to-text-with-css*/
-  position: relative;
-  bottom: 20%;
-  left: 30%;
+  position: absolute;
+  top: 67%;
+  width: 100%;
+  text-align: center;
+}
+
+#salg img {
+  width: 200px;
+  height: 200px;
 }
 
 footer {
@@ -94,30 +100,61 @@ footer nav #copyright {
 @media only screen and (min-width: 800px) {
 
   #total-grid {
-    grid-template-areas: "header header header" 
-                          "main main main" 
-                          "footer footer footer";
+    grid-template-areas: "header" "main main" "footer";
+  }
+
+  .header-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header nav a {
+    text-decoration: none;
+    font-size: 40px;
   }
 
   #logo {
     font-size: 80px;
     float: left;
     margin-left: 0.4rem;
-    margin-top: 4rem;
+    margin-top: 4rem; 
+  }
 
+  #brandz {
+    color: #FDED60;
+    -webkit-text-stroke-width: 0.5px; /*https://kinsta.com/blog/css-text-outline/ */
+    -webkit-text-stroke-color: black;
+  }
+
+  #account {
+    color: #A4FF79;
+    -webkit-text-stroke-width: 0.5px; /*https://kinsta.com/blog/css-text-outline/ */
+    -webkit-text-stroke-color: black;
+  }
+
+  #search {
+    font-size: 40px;
+    grid-column-start: 3;
+    grid-column-end: 4;
   }
 
   main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 2rem;
   }
 
 }
 
 @media only screen and (max-width: 799px) {
   
-  #desktop {
+  #desktop-items {
+    display: none;
+  }
+
+  #salg {
     display: none;
   }
 
