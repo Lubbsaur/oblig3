@@ -100,7 +100,9 @@ footer nav #copyright {
 @media only screen and (min-width: 800px) {
 
   #total-grid {
-    grid-template-areas: "header" "main main" "footer";
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header" "main" "main" "footer";
   }
 
   .header-grid {
@@ -115,10 +117,19 @@ footer nav #copyright {
   }
 
   #logo {
+    order: 1; /*https://www.w3schools.com/cssref/css3_pr_order.php*/
     font-size: 80px;
-    float: left;
-    margin-left: 0.4rem;
-    margin-top: 4rem; 
+    margin-left: 2rem;
+    margin-top: 60px;
+    line-height: 1em;
+    min-height: 0;    
+  }
+
+  #menu {
+    order: 2;
+    font-size: 40px;
+    margin-top: 68.74px;
+    margin-right: -40rem;
   }
 
   #brandz {
@@ -133,18 +144,58 @@ footer nav #copyright {
     -webkit-text-stroke-color: black;
   }
 
+  #desktop-items {
+    order: 3;
+    display: flex;
+    gap: 5rem;
+    margin-top: 68.74px;
+    margin-right: -40rem;
+  }
+
   #search {
+    order: 4;
     font-size: 40px;
-    grid-column-start: 3;
-    grid-column-end: 4;
+    margin-top: 68.74px;
+    margin-right: 2rem;
   }
 
   main {
+    display: grid;
+    grid-template-areas: "hoved" "salg-overskrift" "salg";
+    grid-template-rows: auto 30px auto;
+  }
+
+  #hoved {
+    grid-area: hoved;
     display: flex;
     flex-direction: row;
+    gap: 4rem;
     justify-content: space-between;
-    gap: 2rem;
+    margin: 2rem;
+    height: auto;
+
   }
+
+  #salg {
+    grid-area: salg;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    justify-content: space-between;
+    margin: 2rem;
+
+  }
+
+  #salg-overskrift h3 {
+    grid-area: salg-overskrift;
+    font-size: 40px;
+    font-weight: 400;
+    margin-left: 2rem;
+    line-height: 1em;
+    margin-top: 0;
+  }
+
+  
 
 }
 
