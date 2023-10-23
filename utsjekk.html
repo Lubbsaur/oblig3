@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SNKRZ.no</title>
-  <link href="css/stil.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/nats" rel="stylesheet">
   <link href="css/font/css/fontawesome.css" rel="stylesheet">
   <link href="css/font/css/brands.css" rel="stylesheet">
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div id="total-grid3">
+  <div id="total-grid">
     <header>
       <nav class="header-grid">
           <a href="#menu" id="menu">MENU</a>
@@ -28,31 +28,40 @@
     <main>
       <h1>CART</h1>
       <div id="hoved-utsjekk">
-        <article>
-          <a href="products.html">
-            <img src="img/sko1.png" alt="BADIDAS X2YV5">
+        <article id="bilde">
+          <a href="produkt.html">
+            <img src="img/sko1.png" alt="BADIDAS X2YV5"> <!--Alle bilder av sko er fra https://www.adidas.no/-->
           </a>
         </article>
-        <article>
+        <article id="tekst">
           <p>BADIDAS X2YV5<br>
             SIZE: 42,5<br>
-            TOTAL PRICE: 199,00 $</p>
+            TOTAL PRICE: 199,00$</p>
         </article>
       </div>
       
       <section id="login">
+        <h2>Login</h2>
         <label>
-        <h2>Login:</h2>
-        <input type="text" name="name" placeholder="username/email:">
-        <input type="text" name="lname" placeholder="password:">
+        <input type="text" placeholder="username/email:">
+        </label>
+        <label>
+        <input type="text" placeholder="password:">
         </label>
       </section>
 
       <section id="payment">
         <h2>Payment options:</h2>
+        <img src="img/betaling.png" alt="Bilde av betalingsløsninger">
+      </section>
+
+      <section id="guest">
+        <h2>Guest user</h2>
         <label>
-        <input type="email" name="user-reg-email" placeholder="ola@nordman.no..">
-        <input type="password" name="user-reg-pass" id="user-reg-pass" placeholder="**********">
+        <input type="email" placeholder="email:">
+        </label>
+        <label>
+        <input type="text" placeholder="postal code/zip-code:">
         </label>
       </section>
       </main>

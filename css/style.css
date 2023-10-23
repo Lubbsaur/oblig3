@@ -1,0 +1,414 @@
+/*felles css*/
+body { /*Template til siden tok jeg fra forelesning*/
+  background-color: rgb(255, 255, 255);
+  font-family: 'NATS', sans-serif;
+  margin: 0;
+}
+
+#total-grid { /*https://www.w3schools.com/css/css_grid.asp*/
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header-grid { /*Even Skaug (i klassen) og Webutviklingsboka*/
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  text-decoration: none;
+  font-size: 60px;
+  color: #48B8F6;
+  justify-content: center;
+}
+
+#menu { /*Webutviklingsboka og Even*/
+  font-size: 30px;
+  color: #DB5AF0;
+  text-decoration: none;
+  float: left;
+  margin-top: 1.5rem;
+  margin-left: 0.6rem;
+}
+
+#search {
+  font-size: 30px;
+  color: #B96262;
+  text-decoration: none;
+  float: right;
+  margin-right: 0.6rem;
+  margin-top: 2.5rem;
+}
+
+/*css for index*/
+
+#hoved img {
+  width: 100%;
+  height: auto;
+}
+
+/*css for Products*/
+select {
+  flex-basis: 50%;
+  background-color: #fff;
+  height: 63.5px;
+  border: 1px dashed #000;
+  font-size: 35px;
+  font-weight: 400;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+  margin-right: 1rem;
+}
+
+main button { /*forelesning 18.10*/
+  display: inline-block;
+  width: 95%;
+  background-color: #A4FF79;
+  color: #020202;
+  font-weight: 400;
+  font-size: 40px;
+  border: 0;
+  margin-left: 1rem;
+  height: 63.5px;
+  justify-content: center;
+}
+
+main section h2 {
+  font-size: 30px;
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+main section p {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1rem;
+  width: 95%;
+  font-size: 20px;
+  line-height: 1em;
+  margin-top: -1rem;
+}
+
+#vipps img {
+  width: 50%;
+  height: auto;
+  margin-top: 2.5rem;
+  margin-right: -5rem;
+}
+
+#vipps a {
+  flex-shrink: 2;
+}
+
+#vipps {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+  overflow: auto;
+}
+
+#vipps h3 {
+  font-size: 25px;
+  flex-basis: 100%;
+  flex-shrink: 1;
+}
+
+/*css for Utsjekk*/
+h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: -2rem;
+}
+
+#hoved-utsjekk {
+  display: flex;
+  flex-direction: row;
+}
+
+#hoved-utsjekk img {
+  width: 60%;
+}
+
+
+#hoved-utsjekk article p {
+  font-size: 25px;
+  text-align: right; /*https://stackoverflow.com/questions/15000913/align-an-anchor-to-the-right*/
+  margin-right: 1rem;
+  line-height: 1.3em;
+}
+
+section h2 {
+  font-size: 30px;
+  margin-left: 1rem;
+  margin-bottom: -1rem;
+}
+
+section input{
+  width: 93%;
+  flex-basis: 100%;
+  background-color: #fff;
+  height: 63.5px;
+  border: 1px solid #000;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+  margin-right: 1rem;
+  text-align: right;
+}
+
+#payment img {
+  justify-content: center;
+  max-width: 100%;
+  margin-top: -1rem;
+
+}
+
+#salg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#products-bilde img {
+  width: 100%;
+  height: auto;
+}
+
+#products-ekstra {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#products-ekstra img {
+  width: 100%;
+  height: auto;
+}
+
+
+#salg img {
+  width: 200px;
+  height: 200px;
+}
+
+#salg-overskrift {
+  margin-left: 2rem;
+  font-size: 30px;
+  margin-bottom: -2rem;
+}
+
+#or-this img {
+  width: 200px;
+  height: 200px;
+}
+
+#or-this {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  background-color: #D9D9D9;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+footer nav p { /*https://www.shecodes.io/athena/36202-how-to-remove-space-between-lines-in-css*/
+  line-height: 1em;
+}
+
+footer nav #copyright {
+  color: #686868
+}
+
+#social-icons {
+  float: right;
+  font-size: 50px;
+  margin-top: 1.8rem;
+}
+  
+/*CSS DESKTOP*/
+@media only screen and (min-width: 800px) {
+
+  #total-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header" 
+                          "main main main"
+                          "footer footer footer";
+  }
+
+  #total-grid header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header nav a {
+    text-decoration: none;
+    font-size: 40px;
+  }
+
+  #logo {
+    order: 1; /*https://www.w3schools.com/cssref/css3_pr_order.php*/
+    font-size: 80px;
+    margin-left: 2rem;
+    margin-top: 60px;
+    line-height: 1em;
+    min-height: 0;    
+  }
+
+  #menu {
+    order: 2;
+    font-size: 40px;
+    margin-top: 68.74px;
+    margin-left: 44rem;
+  }
+
+  #brandz {
+    color: #FDED60;
+    -webkit-text-stroke-width: 0.5px; /*https://kinsta.com/blog/css-text-outline/ */
+    -webkit-text-stroke-color: black;
+  }
+
+  #account {
+    color: #A4FF79;
+    -webkit-text-stroke-width: 0.5px; /*https://kinsta.com/blog/css-text-outline/ */
+    -webkit-text-stroke-color: black;
+  }
+
+  #desktop-items {
+    order: 3;
+    display: flex;
+    gap: 1rem;
+    margin-top: 68.74px;
+  }
+
+  #search {
+    order: 4;
+    font-size: 40px;
+    margin-top: 68.74px;
+    margin-right: 2rem;
+  }
+
+  main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #hoved {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  
+  }
+
+  #hoved a img {
+    width: 80%;
+    height: auto;
+  }
+
+  #products-bilde {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main h1 {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  #payment {
+    width: 30%;
+  }
+
+  #tekst p {
+    font-size: 40px;
+  }
+
+
+  #salg {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    gap: 0.4rem;
+    justify-content: space-between;
+    margin: 2rem;
+  }
+
+  #or-this {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    justify-content: space-between;
+    margin: 2rem;
+  }
+
+  #salg-overskrift h3 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-left: 2rem;
+    line-height: 1em;
+    margin-top: 0;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+  }
+
+  footer nav {
+    display: flex;
+    flex-direction: row;
+    gap: 11rem;
+    justify-content: space-between;
+  }
+
+  footer nav a {
+    margin-top: 5px;
+    margin-left: 2rem;
+  }
+
+  footer br {
+    display: none;
+  }
+
+  #social-icons {
+    gap: 2rem;
+    margin: 0;
+    margin-right: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 799px) {
+  
+  #desktop-items {
+    display: none;
+  }
+
+}
