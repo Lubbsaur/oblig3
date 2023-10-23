@@ -25,21 +25,21 @@
       </nav>
     </header>
 
-    <main>
-      <div id="hoved">
+    <main id="main-products">
+      <div id="products-bilde">
         <article>
           <a href="products.html">
-            <img src="img/sko18.png" alt="BADIDAS X2YV5">
+            <img src="img/sko18.png" alt="BADIDAS X2YV5"> <!--Alle bilder av sko er fra https://www.adidas.no/-->
           </a>
         </article>
 
-        <div id="ekstra-desktop">
-          <article>
+        <div id="products-ekstra">
+          <article id="bilde1">
             <a href="products.html">
               <img src="img/sko10.png" alt="BADIDAS FLYQ4">
             </a>
           </article>
-          <article>
+          <article id="bilde2">
             <a href="products.html">
               <img src="img/sko11.png" alt="BADIDAS PINK5">
             </a>
@@ -47,7 +47,7 @@
         </div>
       </div>
 
-      <section>
+      <section id="bokser-info">
         <article>
           <select id="size" name="select-size">
             <option value="SIZE">SIZE</option>
@@ -78,16 +78,26 @@
             <option value="46">46</option>
           </select>
         </article>
-        <a href="utsjekk.html">
-          <button>ADD TO CART</button>
+        <section>
+          <form style="display: inline" action="utsjekk.html" method="get">
+            <button>ADD TO CART</button> <!--https://stackoverflow.com/questions/6393827/can-i-nest-a-button-element-inside-an-a-using-html5-->
+          </form>
+          
+        </section>
+        <section id="vipps">
+        <h3>Fast check out with vipps:</h3>
+        <a href="https://vipps.no/">
+        <img src="img/vipps.png" alt="bilde med link til vipps.no">
         </a>
+        </section>
+        
         <h2>BADIDAS X2YV5:</h2>
         <p>Flats elegant pointed toe design cut-out sides luxe leather lining versatile shoe must-have new season glamorous. Bow detail metallic eyelets leather lining luxurious finish classic courts formal slingback square toe contrasting cap. Effortless comfortable full leather lining eye-catching unique detail to the toe low 'cut-away' sides clean and sleek. </p>
       </section>
 
       <div id="salg-overskrift"><h3>OR THIS?</h3></div>
     
-      <div id="salg">
+      <div id="or-this">
           <article>
             <a href="products.html">
             <img src="img/sko12.png" alt="sko 4">
